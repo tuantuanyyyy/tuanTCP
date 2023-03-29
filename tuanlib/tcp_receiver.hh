@@ -58,6 +58,8 @@ class TCPReceiver {
     //! \brief handle an inbound segment
     void segment_received(const TCPSegment &seg);
 
+    void update_ackno();
+
     //! \name "Output" interface for the reader
     //!@{
     ByteStream &stream_out() { return _reassembler.stream_out(); }
